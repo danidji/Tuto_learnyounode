@@ -12,7 +12,7 @@ const myModule = require('./06-module_export');
 let cheminDossier = process.argv[2];
 let extensionATester = process.argv[3];
 // On rajoute le . devant l'extension à tester
-extensionATester = `.${extensionATester}`
+
 
 // On définit ce que va réaliser la fonction monCallback, qui est en paramètre de la fonction importé dans myModule
 monCallback = (err, data) => {

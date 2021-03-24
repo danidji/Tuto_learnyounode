@@ -19,21 +19,23 @@ const
 //     callback(error, sum) // invoke the callback function
 // }
 
-function filtreExtension(pathFolder, extension, monCallback) {
+function filtreExtension(pathFolder, extensionATester, monCallback) {
+
+    extensionATester = `.${extensionATester}`
 
     fs.readdir(pathFolder, (err, file) => {
 
         if (err) {
             //On appelle la fonction en callback en cas d'erreur
-            monCallback(err)
+            return monCallback(err)
         };
         // v-------on récupère le contenue du filtre dans un tableau 
         let result = file.filter(element => {
 
-            return path.extname(element) === extension
+            return path.extname(element) === extensionATester
         })
         //On appelle la fonction en callback si il n'y a pas d'erreur
-        monCallback(null, result);
+        return monCallback(null, result);
         //Appeler directement la fonction monCallback pour retourner les résultats ou les erreurs laisse la possibilité à l'utilisateur de gérér les données/erreurs comme il veut 
     })
 
