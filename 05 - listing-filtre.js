@@ -32,9 +32,14 @@ fs.readdir(cheminDossier, (err, file) => {
         return path.extname(element) === extensionATester
     })
     // v-----On parcourt le tableau avec les résultats pour les afficher
-    result.forEach(element => {
-        console.log(element)
-    })
+    // result.forEach(element => {
+    //     console.log(element)
+    // })
+
+    // bonne pratique => très utilisé : méthode array.join : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+    console.log(result.join('\n'));
+
 
 
 })
