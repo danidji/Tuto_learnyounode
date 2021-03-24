@@ -39,7 +39,4 @@ fs.readdir(cheminDossier, (err, file) => {
     // bonne pratique => très utilisé : méthode array.join : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
     console.log(result.join('\n'));
-
-
-
 })
