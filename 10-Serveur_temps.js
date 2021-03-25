@@ -18,7 +18,7 @@ function formatDate(nb) {
 
 // voir doc : https://dustinpfister.github.io/2019/07/18/nodejs-net/
 const server = net.createServer()
-
+// On déclenche une fonction de rappel à chaque connection sur le serveur
 server.on('connection', (socket) => {
 
     //Affichage de la date au format voulu
