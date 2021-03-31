@@ -4,7 +4,7 @@ const fs = require('fs');
 //Qu'est c e que j'ai en entrée : 
 // console.log(process.argv);
 
-// Récupèration du chemin de fichier à réupérer
+// Récupèration du chemin de fichier à récupérer
 // console.log(process.argv[2]);
 //import de la méthode readfile "bonne pratique " => ne fonctionne pas pour l'exo
 //import { readFile } from 'fs';
